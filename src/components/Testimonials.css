@@ -1,0 +1,126 @@
+/* ── Testimonials ── */
+.testimonials {
+  background: var(--gray-50);
+}
+
+.testi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testi-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.testi-card__quote-mark {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  color: var(--blue-200);
+  line-height: 0.5;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.testi-card__quote {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  flex: 1;
+  font-style: italic;
+}
+
+.testi-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.testi-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+}
+
+.testi-card__name {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--gray-900);
+}
+
+.testi-card__role {
+  font-size: 0.8125rem;
+  color: var(--gray-400);
+}
+
+/* Faculty */
+.faculty__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.faculty-card {
+  padding: 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.faculty-card .testi-avatar {
+  width: 56px;
+  height: 56px;
+  font-size: 1rem;
+}
+
+.faculty-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.faculty-card__name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gray-900);
+  margin-bottom: 0.2rem;
+}
+
+.faculty-card__role {
+  font-size: 0.8125rem;
+  color: var(--blue-500);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.faculty-card__bio {
+  font-size: 0.8125rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .testi__grid,
+  .faculty__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .testi__grid,
+  .faculty__grid {
+    grid-template-columns: 1fr;
+  }
+}

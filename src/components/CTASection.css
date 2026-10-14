@@ -1,0 +1,171 @@
+/* ── CTA Section ── */
+.cta-section {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.cta-section__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cta-section__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.cta-section__glow--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.cta-section__glow--2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+  bottom: -80px;
+  right: -80px;
+}
+
+.cta-section__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Floating decorative dots */
+.cta-section__dot {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cta-section__dot--1 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(96, 165, 250, 0.08);
+  top: 20%;
+  right: 10%;
+  animation: spin-slow 30s linear infinite;
+}
+
+.cta-section__dot--2 {
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(167, 139, 250, 0.1);
+  bottom: 25%;
+  left: 8%;
+  animation: spin-slow 20s linear infinite reverse;
+}
+
+.cta-section__dot--3 {
+  width: 60px;
+  height: 60px;
+  background: rgba(37, 99, 235, 0.12);
+  top: 30%;
+  right: 20%;
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Content */
+.cta-section__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-section__content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cta-section__label {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  color: var(--blue-300);
+  padding: 0.375rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cta-section__headline {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.cta-section__subtext {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  max-width: 540px;
+}
+
+.cta-section__buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Chips */
+.cta-section__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  justify-content: center;
+}
+
+.cta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.cta-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .cta-section {
+    padding: 4rem 0;
+  }
+
+  .cta-section__buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .cta-section__buttons .btn {
+    justify-content: center;
+  }
+}

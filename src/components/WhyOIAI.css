@@ -1,0 +1,134 @@
+/* ── Why OIAI ── */
+.why-oiai {
+  background: var(--gray-50);
+}
+
+.why-oiai__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── Feature Card ── */
+.feature-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  cursor: default;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon wrapper */
+.feature-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: transform var(--transition-base);
+}
+
+.feature-card:hover .feature-card__icon-wrap {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.feature-icon--blue {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--blue-500);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.feature-icon--violet {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--violet-500);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.feature-icon--cyan {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--electric);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+.feature-card__title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.625rem;
+}
+
+.feature-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--gray-500);
+}
+
+/* Bottom accent bar */
+.feature-card__accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+}
+
+.feature-card:hover .feature-card__accent {
+  transform: scaleX(1);
+}
+
+.feature-accent--blue {
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
+}
+
+.feature-accent--violet {
+  background: linear-gradient(90deg, var(--violet-500), var(--violet-400));
+}
+
+.feature-accent--cyan {
+  background: linear-gradient(90deg, var(--electric), var(--cyan-400));
+}
+
+/* Corner glow on hover */
+.feature-card--blue:hover {
+  box-shadow: 0 20px 48px rgba(37, 99, 235, 0.1), 0 4px 8px rgba(0,0,0,0.06);
+}
+
+.feature-card--violet:hover {
+  box-shadow: 0 20px 48px rgba(139, 92, 246, 0.1), 0 4px 8px rgba(0,0,0,0.06);
+}
+
+.feature-card--cyan:hover {
+  box-shadow: 0 20px 48px rgba(14, 165, 233, 0.1), 0 4px 8px rgba(0,0,0,0.06);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .why-oiai__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why-oiai__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
